@@ -1,5 +1,5 @@
 import tkinter as tk
-from client.gui_app import Frame
+from components.gui_app import Frame
 
 def main():
     root = tk.Tk() # esta clase generara la interfaz de la aplicacion
