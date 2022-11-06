@@ -49,10 +49,15 @@ class Frame(tk.Frame):
 
          self.sec_entry_name = tk.Entry(self)
          self.sec_entry_name.config(width = 50, state = 'disabled', font = ('Arial', 12))
-         self.sec_entry_name.grid(row = 0, column = 1, padx = 10, pady = 10)
+         self.sec_entry_name.grid(row = 1, column = 1, padx = 10, pady = 10)
 
          self.third_entry_name = tk.Entry(self)
          self.third_entry_name.config(width = 50, state = 'disabled', font = ('Arial', 12))
-         self.third_entry_name.grid(row = 0, column = 1, padx = 10, pady = 10)
+         self.third_entry_name.grid(row = 2, column = 1, padx = 10, pady = 10)
+
+         self.new_button = tk.Button(self, text = 'Nuevo elemento')
+         self.new_button.config(width = 20, font = ('Arial', 12, 'bold'), fg = 'white', bg = '#00FF00')
+         self.new_button.grid(row = 4, column = 0, padx = 10m pady =10)
+
 
 
