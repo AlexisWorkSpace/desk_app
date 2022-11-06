@@ -32,32 +32,102 @@ class Frame(tk.Frame):
     def elem_field(self):
          self.name_label = tk.Label(self, text = '''nombre de lo que ira en la base de datos''')
          self.name_label.config(font = ('Arial', 12, 'bold'))
-         self.name_label.grid(row = 0, column = 0, padx = 10, pady = 10)
+         self.name_label.grid(
+                 row = 0, 
+                 column = 0, 
+                 padx = 10, 
+                 pady = 10)
 
 
          self.sec_name_label = tk.Label(self, text = '''nombre de lo que ira en la base de datos''')
          self.sec_name_label.config(font = ('Arial', 12, 'bold'))
-         self.sec_name_label.grid(row = 1, column = 0, padx = 10, pady = 10)
+         self.sec_name_label.grid(
+                 row = 1, 
+                 column = 0, 
+                 padx = 10, 
+                 pady = 10)
 
          self.third_name_label = tk.Label(self, text = '''nombre de lo que ira en la base de datos''')
          self.third_name_label.config(font = ('Arial', 12, 'bold'))
-         self.third_name_label.grid(row = 2, column = 0, padx = 10, pady = 10)
+         self.third_name_label.grid(
+                 row = 2, 
+                 column = 0, 
+                 padx = 10, 
+                 pady = 10)
 
          self.entry_name = tk.Entry(self)
-         self.entry_name.config(width = 50, state = 'disabled', font = ('Arial', 12))
-         self.entry_name.grid(row = 0, column = 1, padx = 10, pady = 10)
+         self.entry_name.config(
+                 width = 50, 
+                 state = 'disabled',
+                 font = ('Arial', 12))
+         self.entry_name.grid(
+                 row = 0, 
+                 column = 1, 
+                 padx = 10, 
+                 pady = 10)
 
          self.sec_entry_name = tk.Entry(self)
-         self.sec_entry_name.config(width = 50, state = 'disabled', font = ('Arial', 12))
-         self.sec_entry_name.grid(row = 1, column = 1, padx = 10, pady = 10)
+         self.sec_entry_name.config(
+                 width = 50, 
+                 state = 'disabled', 
+                 font = ('Arial', 12))
+         self.sec_entry_name.grid(
+                 row = 1, 
+                 column = 1, 
+                 padx = 10, 
+                 pady = 10)
 
          self.third_entry_name = tk.Entry(self)
-         self.third_entry_name.config(width = 50, state = 'disabled', font = ('Arial', 12))
-         self.third_entry_name.grid(row = 2, column = 1, padx = 10, pady = 10)
+         self.third_entry_name.config(
+                 width = 50, 
+                 state = 'disabled', 
+                 font = ('Arial', 12))
+         self.third_entry_name.grid(
+                 row = 2, 
+                 column = 1, 
+                 padx = 10, 
+                 pady = 10)
 
          self.new_button = tk.Button(self, text = 'Nuevo elemento')
-         self.new_button.config(width = 20, font = ('Arial', 12, 'bold'), fg = 'white', bg = '#00FF00')
-         self.new_button.grid(row = 4, column = 0, padx = 10m pady =10)
+         self.new_button.config(
+                 width = 20, 
+                 font = ('Arial', 12, 'bold'), 
+                 fg = '#FFFFFF', 
+                 bg = '#00FF00', 
+                 cursor = 'hand2'
+                 activebackground = '#35BD6F')
+         self.new_button.grid(
+                 row = 4, 
+                 column = 0, 
+                 padx = 10, 
+                 pady =10)
 
+         self.delete_button = tk.Button(self, text = 'borrar elemento')
+         self.delete_button.config(
+                 width = 20, 
+                 font = ('Arial', 12, 'bold'), 
+                 fg = '#FFFFFF', 
+                 bg = '#00FF00', 
+                 cursor = 'hand2'
+                 activebackground = '#35BD6F')
+         self.delete_button.grid(
+                 row = 4, 
+                 column = 1, 
+                 padx = 10, 
+                 pady =10)
+
+         self.add_button = tk.Button(self, text = 'Agregar elemento')
+         self.add_button.config(
+                 width = 20, 
+                 font = ('Arial', 12, 'bold'), 
+                 fg = '#FFFFFF', 
+                 bg = '#00FF00', 
+                 cursor = 'hand2'
+                 activebackground = '#35BD6F')
+         self.add_button.grid(
+                 row = 4, 
+                 column = 2, 
+                 padx = 10, 
+                 pady =10)
 
 
