@@ -88,7 +88,7 @@ class Frame(tk.Frame):
                  pady = 10,
                  columnspan = 2)
 
-         self.new_button = tk.Button(self, text = 'Nuevo elemento')
+         self.new_button = tk.Button(self, text = 'Nuevo elemento', self.enable_fields)
          self.new_button.config(
                  width = 20, 
                  font = ('Arial', 12, 'bold'), 
