@@ -57,36 +57,36 @@ class Frame(tk.Frame):
 
          self.entry_name = tk.Entry(self)
          self.entry_name.config(
-                 width = 50, 
-                 state = 'disabled',
+                 width = 50,
                  font = ('Arial', 12))
          self.entry_name.grid(
                  row = 0, 
                  column = 1, 
                  padx = 10, 
-                 pady = 10)
+                 pady = 10,
+                 columnspan = 2)
 
          self.sec_entry_name = tk.Entry(self)
          self.sec_entry_name.config(
                  width = 50, 
-                 state = 'disabled', 
                  font = ('Arial', 12))
          self.sec_entry_name.grid(
                  row = 1, 
                  column = 1, 
                  padx = 10, 
-                 pady = 10)
+                 pady = 10,
+                 columnspan = 2)
 
          self.third_entry_name = tk.Entry(self)
          self.third_entry_name.config(
                  width = 50, 
-                 state = 'disabled', 
                  font = ('Arial', 12))
          self.third_entry_name.grid(
                  row = 2, 
                  column = 1, 
                  padx = 10, 
-                 pady = 10)
+                 pady = 10,
+                 columnspan = 2)
 
          self.new_button = tk.Button(self, text = 'Nuevo elemento')
          self.new_button.config(
@@ -107,27 +107,45 @@ class Frame(tk.Frame):
                  width = 20, 
                  font = ('Arial', 12, 'bold'), 
                  fg = '#FFFFFF', 
-                 bg = '#00FF00', 
+                 bg = '#FF0000', 
                  cursor = 'hand2'
-                 activebackground = '#35BD6F')
+                 activebackground = '#3586DF')
          self.delete_button.grid(
                  row = 4, 
                  column = 1, 
                  padx = 10, 
                  pady =10)
 
-         self.add_button = tk.Button(self, text = 'Agregar elemento')
-         self.add_button.config(
+         self.cancel_button = tk.Button(self, text = 'Cancelar')
+         self.cancel_button.config(
                  width = 20, 
                  font = ('Arial', 12, 'bold'), 
                  fg = '#FFFFFF', 
-                 bg = '#00FF00', 
+                 bg = '#0000FF', 
                  cursor = 'hand2'
-                 activebackground = '#35BD6F')
-         self.add_button.grid(
+                 activebackground = '#E15370')
+         self.cancel_button.grid(
                  row = 4, 
                  column = 2, 
                  padx = 10, 
                  pady =10)
+
+        def enable_fields(self):
+            self.entry_name.config(state = 'normal')
+            self.sec_entry_name.config(state = 'normal')
+            self.third_entry_name.config(state = 'normal')
+
+            self.delete_button.config(state = 'normal')
+            self.cancel_button.config(state = 'normal')
+
+  
+
+        def disabled_fields(self):
+            self.entry_name.config(state = 'disabled')
+            self.sec_entry_name.config(state = 'disabled')
+            self.third_entry_name.config(state = 'disabled')
+
+            self.delete_button.config(state = 'disabled')
+            self.cancel_button.config(state = 'disabled')
 
 
