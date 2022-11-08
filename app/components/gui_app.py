@@ -1,20 +1,22 @@
 import tkinter as tk
 from tkinter import ttk
+from model.db_dao import create_tab, delete_tab
+from model.db_dao import DB
 
 def menu_bar(root):
     menu_bar = tk.Menu(root)
     root.config(menu = menu_bar, width=300, height=300)
     
     main_menu = tk.Menu(menu_bar, tearoff=0)
-    menu_bar.add_cascade(Label = 'Inicio', menu = main_menu)
+    menu_bar.add_cascade(label = 'Inicio', menu = main_menu)
 
-    main_menu.add_command(Label = 'Crear registro DB')
-    main_menu.add_command(Label = 'Eliminar registro DB')
-    main_menu.add_command(Label = 'Salir', command = root.destroy)
+    main_menu.add_command(label = 'Crear registro DB', command = create_tab)
+    main_menu.add_command(label = 'Eliminar registro DB', command = delete_ta, command = delete_tab)
+    main_menu.add_command(label = 'Salir', command = root.destroy)
 
-    menu_bar.add_cascade(menu = 'Consultas')
-    menu_bar.add_cascade(menu = 'Configuracion')
-    menu_bar.add_cascade(menu = 'Ayuda')
+    menu_bar.add_cascade(label = 'Consultas')
+    menu_bar.add_cascade(label = 'Configuracion')
+    menu_bar.add_cascade(label = 'Ayuda')
 
     '''
     para agregar comandos a la cascada de de cada menu se debe utilizar el comando .add_command()
@@ -140,7 +142,7 @@ class Frame(tk.Frame):
         self.sec_entry_name.config(state = 'normal')
         self.third_entry_name.config(state = 'normal')
 
-        self.delete_button.config(state = 'normal')
+        self.cancel_button.config(state = 'normal')
         self.cancel_button.config(state = 'normal')
 
   
@@ -154,7 +156,7 @@ class Frame(tk.Frame):
         self.sec_entry_name.config(state = 'disabled')
         self.third_entry_name.config(state = 'disabled')
 
-        self.delete_button.config(state = 'disabled')
+        self.cancel_button.config(state = 'disabled')
         self.cancel_button.config(state = 'disabled')
 
     def data_upload(self):
@@ -175,4 +177,30 @@ class Frame(tk.Frame):
         self.tabla.insert('', 0, text = '1', 
                 values = ('algo', 'otra cosa', 'otra mas'))
 
+        self.edit_button = tk.Button(self, text = 'editar')
+        self.edit_button.config(
+                width = 20, 
+                font = ('Arial', 12, 'bold'), 
+                fg = '#FFFFFF', 
+                bg = '#00FF00', 
+                cursor = 'hand2'
+                activebackground = '#35BD6F')
+        self.edit_button.grid(
+                row = 5, 
+                column = 0, 
+                padx = 10, 
+                pady =10)
 
+        self.delete_button = tk.Button(self, text = 'borrar')
+        self.delete_button.config(
+                width = 20, 
+                font = ('Arial', 12, 'bold'), 
+                fg = '#FFFFFF', 
+                bg = '#0000FF', 
+                cursor = 'hand2'
+                activebackground = '#E15370')
+        self.delete_button.grid(
+                row = 5, 
+                column = 1, 
+                padx = 10, 
+                pady =10)
